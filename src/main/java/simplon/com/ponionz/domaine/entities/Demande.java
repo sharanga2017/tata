@@ -44,83 +44,92 @@ public class Demande {
     private LocalDate date;
 
     @Column(name = "time", nullable = false)
-    private LocalTime time;
+    private LocalDate time;
+
+    public Long getId() {
+        return id;
+    }
+
+
 
     public Demande() {
 
 
     }
 
-    public LocalDate getDate() {
-	return date;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setDate(LocalDate date) {
-	this.date = date;
+    public long getAmount() {
+        return amount;
     }
 
-    public LocalTime getTime() {
-	return time;
-    }
-
-    public void setTime(LocalTime time) {
-	this.time = time;
-    }
-
-    public long getMontant() {
-	return amount;
-    }
-
-    public void setMontant(long montant) {
-	this.amount = montant;
+    public void setAmount(long amount) {
+        this.amount = amount;
     }
 
     public long getApport() {
-	return apport;
+        return apport;
     }
 
     public void setApport(long apport) {
-	this.apport = apport;
+        this.apport = apport;
     }
 
     public int getPeriod() {
-	return period;
+        return period;
     }
 
     public void setPeriod(int period) {
-	this.period = period;
+        this.period = period;
     }
 
     public double getInterestRate() {
-	return interestRate;
+        return interestRate;
     }
 
     public void setInterestRate(double interestRate) {
-	this.interestRate = interestRate;
+        this.interestRate = interestRate;
     }
 
     public double getInsuranceRate() {
-	return insuranceRate;
+        return insuranceRate;
     }
 
     public void setInsuranceRate(double insuranceRate) {
-	this.insuranceRate = insuranceRate;
+        this.insuranceRate = insuranceRate;
     }
 
     public boolean isJobLossInsuranceTaken() {
-	return jobLossInsuranceTaken;
+        return jobLossInsuranceTaken;
     }
 
     public void setJobLossInsuranceTaken(boolean jobLossInsuranceTaken) {
-	this.jobLossInsuranceTaken = jobLossInsuranceTaken;
+        this.jobLossInsuranceTaken = jobLossInsuranceTaken;
     }
 
-    public int getTauxJobLossInsurance() {
-	return jobLossInsuranceRate;
+    public int getJobLossInsuranceRate() {
+        return jobLossInsuranceRate;
     }
 
-    public void setTauxJobLossInsurance(int tauxJobLossInsurance) {
-	this.jobLossInsuranceRate = tauxJobLossInsurance;
+    public void setJobLossInsuranceRate(int jobLossInsuranceRate) {
+        this.jobLossInsuranceRate = jobLossInsuranceRate;
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public LocalDate getTime() {
+        return time;
+    }
+
+    public void setTime(LocalDate time) {
+        this.time = time;
+    }
 }

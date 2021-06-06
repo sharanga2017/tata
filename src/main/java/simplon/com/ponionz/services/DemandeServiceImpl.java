@@ -7,6 +7,8 @@ import simplon.com.ponionz.domaine.entities.Demande;
 import simplon.com.ponionz.repositories.DemandeRepository;
 import simplon.com.ponionz.repositories.DemandeRepository;
 
+import java.time.LocalDate;
+
 @Service
 public class DemandeServiceImpl implements DemandeService {
 
@@ -20,9 +22,14 @@ public class DemandeServiceImpl implements DemandeService {
     public void create(DemandeCreate dto) {
 
         Demande demande = new Demande();
-        demande.setMontant(dto.getAmount());
+        demande.setAmount(dto.getAmount());
         demande.setApport(dto.getApport());
         demande.setInsuranceRate(dto.getInsuranceRate());
+        demande.setDate(dto.getDate());
+        demande.setInterestRate(dto.getInterestRate());
+        demande.setJobLossInsuranceTaken(dto.isJobLossInsuranceTaken());
+
+        demande.setTime(LocalDate.now());
 
         /// etc a faire
         demandes.save(demande);

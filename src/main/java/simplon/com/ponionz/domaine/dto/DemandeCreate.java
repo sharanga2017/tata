@@ -15,7 +15,7 @@ public class DemandeCreate {
     private boolean jobLossInsuranceTaken;
     private int jobLossInsuranceRate;
     private LocalDate date;
-    private LocalTime time;
+
 
     public long getAmount() {
         return amount;
@@ -81,13 +81,7 @@ public class DemandeCreate {
         this.date = date;
     }
 
-    public LocalTime getTime() {
-        return time;
-    }
 
-    public void setTime(LocalTime time) {
-        this.time = time;
-    }
 
     public DemandeCreate() {
 
