@@ -1,6 +1,7 @@
 package simplon.com.ponionz.domaine.entities;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import javax.persistence.Column;
@@ -44,7 +45,7 @@ public class Demande {
     private LocalDate date;
 
     @Column(name = "time", nullable = false)
-    private LocalDate time;
+    private LocalDateTime time;
 
     public Long getId() {
         return id;
@@ -125,11 +126,11 @@ public class Demande {
         this.date = date;
     }
 
-    public LocalDate getTime() {
+    public LocalDateTime getTime() {
         return time;
     }
 
-    public void setTime(LocalDate time) {
+    public void setTime(LocalDateTime time) {
         this.time = time;
     }
 }

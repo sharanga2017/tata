@@ -7,7 +7,10 @@ import simplon.com.ponionz.domaine.entities.Demande;
 import simplon.com.ponionz.repositories.DemandeRepository;
 import simplon.com.ponionz.repositories.DemandeRepository;
 
+import java.time.Clock;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 @Service
 public class DemandeServiceImpl implements DemandeService {
@@ -28,8 +31,11 @@ public class DemandeServiceImpl implements DemandeService {
         demande.setDate(dto.getDate());
         demande.setInterestRate(dto.getInterestRate());
         demande.setJobLossInsuranceTaken(dto.isJobLossInsuranceTaken());
+        ZoneId zoneEuropeParis = ZoneId.of("Europe/Paris");
 
-        demande.setTime(LocalDate.now());
+        Clock clockParis = Clock.system(zoneEuropeParis);
+       // demand.setDateRequest(LocalDateTime.now(clockParis));
+        demande.setTime(LocalDateTime.now(clockParis));
 
         /// etc a faire
         demandes.save(demande);
